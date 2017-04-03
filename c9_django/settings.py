@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    #custom apps
+    'hello.apps.HelloConfig',
 ]
 
 MIDDLEWARE_CLASSES = [
