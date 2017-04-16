@@ -1,0 +1,11 @@
+li a {
+    color: green;
+}
+
+ul {
+    list-style-image: url(./images/custom.png);
+}
+
+body {
+    background-color: black;
+}
