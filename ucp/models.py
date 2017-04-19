@@ -1,22 +1,15 @@
-from __future__ import unicode_literals
-
 from django.db import models
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 # Create your models here.
 
 class Player(models.Model):
-    playerName = models.CharField(max_length=20)
-    playerRights = models.IntegerField(default=0)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    playerRights = models.IntegerField(default=0, blank=True)
+    blackMarks = models.IntegerField(default=0, blank=True)
+    timePlayed = models.BigIntegerField(default=0, blank=True)
+    ipAddress = models.GenericIPAddressField(default=0)
     def __str__(self):
-        return self.playerName
-
-class Users(models.Model):
-    playerName = models.CharField(max_length=20)
-    playerPass = models.CharField(max_length=25)
-    playerRights = models.IntegerField(default=0)
-    blackMarks = models.IntegerField(default=0)
-    timePlayed = models.BigIntegerField(default=0)
-    ipAddress = models.TextField()
-    email = models.EmailField()
-    def __str__(self):
-        return self.playerName
+        return self.user.get_username()
