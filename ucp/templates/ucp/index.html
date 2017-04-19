@@ -4,8 +4,8 @@
 
 {% if displayUsers %}
 <ul>
-  {% for user in object_list %}
-    <li class="user">{{ user }}</li>
+  {% for user in displayUsers %}
+    <li><a href="{% url 'ucp:user' user.id %}">{{ user }}</a>
   {% endfor %}
 </ul>
 {% else %}
