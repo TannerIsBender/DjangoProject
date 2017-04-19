@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     #custom apps
     'hello.apps.HelloConfig',
     'polls.apps.PollsConfig',
+    'ucp.apps.UcpConfig'
 ]
 
 MIDDLEWARE_CLASSES = [
