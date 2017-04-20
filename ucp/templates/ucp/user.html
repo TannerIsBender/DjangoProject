@@ -1,5 +1,5 @@
-<h1>Viewing User Control Panel: {{ user }} </h1>
-
-		Welcome to the User Control Panel, <? echo getIcon($rights)?><? echo $username ?>!
-		Please use the links above to navigate.<br><br>
-		Your last IP used is: <span style="color:#78aace"> {{ user.player.ipAddress }} </span><br>
+Welcome to the User Control Panel, {{ user }}!
+Please use the links above to navigate.<br><br>
+Your last IP used is: <span style="color:#78aace"> {{ user.player.ipAddress }} </span><br>
+You have {{ user.player.blackMarks }} blackmarks <br>
+There are : {{ ban.count }} bans currently active

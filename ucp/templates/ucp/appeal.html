@@ -1,0 +1,21 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'ucp/style.css' %}" />
+
+<div class="center">
+        <div class="appealMore">
+             
+            <b>Banned Player: </b> <span class="result"> {{ bans.bannedPlayer }}</span><br><br>
+            <b>Banned By: </b> <span class="result"><? echo $ban['bannedBy'] ?></span> <br><br>
+            <b>Reason: </b> <span class="result"><? echo $ban['reason'] ?></span> <br><br>
+            <b>Appeal Text: </b> <span class="result"><? echo $aText ?></span> <br><br>
+             
+        </div>
+ 
+        <form>
+            <input type="button" value="Accept" onClick="parent.location='acceptAppeal.php?id=<?php echo $appeal['appealID']?>'"/>
+            <input type="button" value="Reject" onClick="parent.location='rejectAppeal.php?id=<?php echo $appeal['appealID']?>'"/>
+        </form>
+ 
+ 
+</div>
