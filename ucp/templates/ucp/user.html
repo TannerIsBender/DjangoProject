@@ -1,4 +1,5 @@
 <h1>Viewing User Control Panel: {{ user }} </h1>
-<p>Look here!!</p>
 
-
+		Welcome to the User Control Panel, <? echo getIcon($rights)?><? echo $username ?>!
+		Please use the links above to navigate.<br><br>
+		Your last IP used is: <span style="color:#78aace"> {{ user.player.ipAddress }} </span><br>
