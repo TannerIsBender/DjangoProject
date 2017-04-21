@@ -1,13 +1,44 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'ucp/style.css' %}" />
-
+		<div id="wrapper">
+			<div id="top">
+				<center>
+				<ul class="navigation">
+					<li><a href="./index.html">Home</a></li>
+                    <li class="dividerr"></li>
+                    <li><a href="./ucp/index.html">UCP Home</a></li>
+					<li class="dividerr"></li>
+					<li><a href="./donate.html">Donate</a></li>
+					<li class="dividerr"></li>
+					<li><a href="{% url 'ucp:user' user.id %}">Profile</a></li>
+					<li class="dividerr"></li>
+					<li><a href="logout.html">Logout</a></li>
+				</ul>
+				</center>
+				<div class="clear"></div>
+			</div>
+			<div id="logo_bg">
+				<div id="logo"></div>
+<div class="center">
+<br>
+<table>
+	<tr>
+		<th>Username</th>
+		<th>Rights</th>
+		<th>IP</th>
+	</tr>
 {% if displayUsers %}
-<ul>
-  {% for user in displayUsers %}
-    <li><a href="{% url 'ucp:user' user.id %}">{{ user }}</a>
+	<tr>
+	  {% for user in displayUsers %}
+	    <td><a href="{% url 'ucp:user' user.id %}">{{ user }}</td>
+	    <td>{{ user.player.playerRights }}</td>
+	    <td>{{ user.player.ipAddress }}</td>
+	</tr>
   {% endfor %}
-</ul>
 {% else %}
     <p>There are no users.</p>
 {% endif %}
+	
+</table>
+</div>
