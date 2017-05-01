@@ -1,3 +1,7 @@
+<html>
+	<head>
+		<title>Users</title>
+	</head>
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'ucp/style.css' %}" />
@@ -19,7 +23,7 @@
 			<div id="logo_bg">
 				<div id="logo"></div>
 <div class="center">
-
+<body>
 Welcome to the User Control Panel, {{ user }}!
 Please use the links above to navigate.<br><br>
 Your last IP used is: <span style="color:#78aace"> {{ user.player.ipAddress }} </span><br>
@@ -35,3 +39,6 @@ There are {{ bans|length }} bans currently active.
 <br>
 There are {{ appeals|length }} appeals currently active.
 {% endif %}
+
+</body>
+</html>

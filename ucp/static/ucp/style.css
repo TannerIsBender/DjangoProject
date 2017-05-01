@@ -6,30 +6,6 @@ body {
 	color: #262626;
 	background: #292929 url('./images/bg_repeat.png') repeat-x;
 }
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
- 
-li:last-child {
-  border: none;
-}
- 
-li {
-  text-decoration: none;
-  color: #000;
-  display: block;
-  width: 200px;
-}
- 
-li:hover {
-  font-size: 30px;
-  background: #f6f6f6;
-}
-a {
-	text-decoration: none;
-}
 #wrapper {
 	width: 760px;
 	height: 100%;
@@ -40,8 +16,30 @@ a {
 	height: 40px;
 	color: #fff;
 }
+#top ul li {
+	list-style: none;
+	float: left;
+}
+#top ul li a {
+	color: #fff;
+	font-size: 10pt;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: "Arial";
+	font-weight: bold;
+}
+#top ul li a:hover {
+	color: #292929;
+}
+#chatlog {
+	
+	border: 1px solid white;
+	color: #000000;
+	background-color: #fffff;
+	
+}
 .navigation {
-	width: 570px;
+	width: 500px;
 	margin: auto;
 	padding-top: 10px;
 }
@@ -52,6 +50,7 @@ a {
 #logo {
 	width: 423px;
 	height: 80px;
+	background: url(./images/logo.png) no-repeat center top;
 	margin: 41px auto;
 }
 #welcome {
