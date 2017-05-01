@@ -21,9 +21,6 @@ li {
   color: #000;
   display: block;
   width: 200px;
-	-webkit-transition: font-size 1.4s ease, background-color 1.4s ease;
-	-moz-transition: font-size 1.4s ease, background-color 1.4s ease;
-	transition: font-size 1.4s ease, background-color 1.4s ease;
 }
  
 li:hover {
