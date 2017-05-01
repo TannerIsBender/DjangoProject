@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from django.views import generic
 
-from .models import Player, User
+from .models import Player, User, Report
 
 class IndexView(generic.ListView):
     template_name = 'ucp/index.html'
@@ -17,3 +17,6 @@ class UserView(generic.DetailView):
     
 class ReportsView(generic.DetailView):
     template_name = 'ucp/reports.html'
+    context_object_name = 'displayReports'
+    def get_queryset(self):
+        return Report.objects.order_by('id')
