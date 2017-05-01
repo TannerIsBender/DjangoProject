@@ -5,15 +5,13 @@
 			<div id="top">
 				<center>
 				<ul class="navigation">
-					<li><a href="../index.html">Home</a></li>
-                    <li class="dividerr"></li>
                     <li><a href="../ucp/index.html">UCP Home</a></li>
 					<li class="dividerr"></li>
 					<li><a href="../donate.html">Donate</a></li>
 					<li class="dividerr"></li>
-					<li><a href="../1">Admin Profile</a></li>
+					<li><a href="../">Admin Profile</a></li>
 					<li class="dividerr"></li>
-					<li><a href="../2">Mod Profile</a></li>
+					<li><a href="../">Mod Profile</a></li>
 				</ul>
 				</center>
 				<div class="clear"></div>
@@ -21,25 +19,16 @@
 			<div id="logo_bg">
 				<div id="logo"></div>
 <div class="center">
-	<table>
-		<tr> <th>Reported Player</th> <th>Reported By</th> <th>Report Reason</th> <th>View More</th> <th>Remove</th> </tr>
-		// keeps getting the next row until there are no more to get
-		while ($report = mysql_fetch_array($reportsQ)) {
-
-			echo "<tr><td>";
-			echo $report['target'];
-			echo "</td><td>";
-			echo $report['reporter'];
-			echo "</td><td>";
-			echo getReportText($report['reason']);
-			echo "</td><td>";
-			echo "<a href=\"viewReport.php?id=" . $report['id'] . "\" class=\"viewMore\">View More</a>";
-			echo "</td><td>";
-			echo "<a href=\"removeReport.php?id=" . $report['id'] . "\" class=\"viewMore\">Remove</a>";
-			echo "</td></tr>";
-
-		}
-
-		echo "</table>";
-			
-		</div>
+	<table style="width:600px;">
+		<tr>
+			<th>Reported Player</th>
+			<th>Reported By</th>
+			<th>Report Reason</th>
+		</tr>
+		<tr>
+			<td>{{ report.target }}</td>
+			<td>{{ report.reporter }}</td>
+			<td id="chatlog">{{ report.reason }}</td>
+		</tr>
+	</table>
+</div>

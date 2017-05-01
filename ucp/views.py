@@ -16,7 +16,5 @@ class UserView(generic.DetailView):
     template_name = 'ucp/user.html'
     
 class ReportsView(generic.DetailView):
+    model = Report
     template_name = 'ucp/reports.html'
-    context_object_name = 'displayReports'
-    def get_queryset(self):
-        return Report.objects.order_by('id')
