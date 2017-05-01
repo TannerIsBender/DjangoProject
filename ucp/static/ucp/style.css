@@ -18,7 +18,7 @@ body {
 }
 #top ul li {
 	list-style: none;
-	float: left;
+	display: inline;
 }
 #top ul li a {
 	color: #fff;
@@ -39,9 +39,8 @@ body {
 	
 }
 .navigation {
-	width: 500px;
 	margin: auto;
-	padding-top: 10px;
+	padding-top: 7px;
 }
 #logo_bg {
 	width: 100%;
