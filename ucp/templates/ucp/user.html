@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Users</title>
+	</head>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'ucp/style.css' %}" />
+		<div id="wrapper">
+			<div id="top">
+				<center>
+				<ul class="navigation">
+                    <li><a href="../">UCP Home</a></li>
+					<li class="dividerr"></li>
+					<li><a href="../1/reports/">Reports</a></li>
+					<li class="dividerr"></li>
+					<li><a href="../1">Admin Profile</a></li>
+					<li class="dividerr"></li>
+					<li><a href="../2">Mod Profile</a></li>
+				</ul>
+				</center>
+				<div class="clear"></div>
+			</div>
+			<div id="logo_bg">
+				<div id="logo"></div>
+<div class="center">
+<body>
+Welcome to the User Control Panel, {{ user }}!
+Please use the links above to navigate.<br><br>
+Your last IP used is: <span style="color:#78aace"> {{ user.player.ipAddress }} </span><br>
+You have {{ user.player.blackMarks }} blackmarks <br>
+<br>
+<br>
+<h2>Staff CP</h2>
+<br>
+{% if user.player.playerRights > 0 %}
+There are {{ reports|length }} reports currently active.
+<br>
+There are {{ bans|length }} bans currently active.
+<br>
+There are {{ appeals|length }} appeals currently active.
+{% endif %}
+
+</body>
+</html>

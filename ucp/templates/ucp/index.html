@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Index</title>
+		<script>
+			alert("Hello, our developers are not very innovative and could not find a better way to incorporate javascript into this project!");
+		</script>
+	</head>
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'ucp/style.css' %}" />
+		<div id="wrapper">
+			<div id="top">
+				<center>
+				<ul class="navigation">
+                    <li><a href="../ucp/">UCP Home</a></li>
+					<li class="dividerr"></li>
+					<li><a href="./1/reports/">Reports</a></li>
+					<li class="dividerr"></li>
+					<li><a href="./1">Admin Profile</a></li>
+					<li class="dividerr"></li>
+					<li><a href="./2">Mod Profile</a></li>
+				</ul>
+				</center>
+				<div class="clear"></div>
+			</div>
+			<div id="logo_bg">
+				<div id="logo"></div>
+<div class="center">
+<body>
+<br>
+Welcome to the User Control Panel!
+<br>
+You can view different report logs as well as appeals for different banned players.
+Up on the navigation bar you can get to the reports and profiles of other users.
+<br><br>
+<ul>
+	{% for user in displayUsers %}
+	<li><a href="{% url 'ucp:user' user.id %}">{{user}}</li>
+  {% endfor %}
+</ul>
+</div>
+</body>
+</html>

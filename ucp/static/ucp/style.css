@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Arial", "Lucida Grande", "Lucida Sans", Verdana, Tahoma, sans-serif;
+	font-size: 9pt;
+	color: #262626;
+	background: #292929 url('./images/bg_repeat.png') repeat-x;
+}
+#wrapper {
+	width: 760px;
+	height: 100%;
+	margin: 0 auto;
+}
+#top {
+	width: 760px;
+	height: 40px;
+	color: #fff;
+}
+#top ul li {
+	list-style: none;
+	display: inline;
+}
+#top ul li a {
+	color: #fff;
+	font-size: 10pt;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: "Arial";
+	font-weight: bold;
+}
+#top ul li a:hover {
+	color: #292929;
+}
+#chatlog {
+	
+	border: 1px solid white;
+	color: #000000;
+	background-color: #fffff;
+	
+}
+.navigation {
+	margin: auto;
+	padding-top: 7px;
+}
+#logo_bg {
+	width: 100%;
+	height: 180px;
+}
+#logo {
+	width: 423px;
+	height: 80px;
+	background: url(./images/logo.png) no-repeat center top;
+	margin: 41px auto;
+}
+#welcome {
+	color: white;
+	font-size: 11pt;
+	text-align: center;
+}
+#welcome a {
+	color: white;
+	font-weight: bold;
+}
+#welcome a:hover {
+	text-decoration: underline;
+}
+
+.dividerr {
+	content:url(./images/divider.png);
+}
+.center {
+	width: 100%;
+	color: #fff;
+}
+.center_navigation li {
+	float: left;
+}
+.center_navigation li a:hover {
+	opacity: 0.7;
+}
+table {
+	border: 1px solid white;
+	color: #fff;
+}
+#chatlog {
+	border: 1px solid white;
+	color: #000000;
+	background-color: #fffff;
+}
+

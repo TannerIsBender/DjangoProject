@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Reports</title>
+	</head>
+{% load staticfiles %}
+<body>
+<link rel="stylesheet" type="text/css" href="{% static 'ucp/style.css' %}" />
+		<div id="wrapper">
+			<div id="top">
+				<center>
+				<ul class="navigation">
+                    <li><a href="../">UCP Home</a></li>
+					<li class="dividerr"></li>
+					<li><a href="../reports/">Reports</a></li>
+					<li class="dividerr"></li>
+					<li><a href="../">Admin Profile</a></li>
+					<li class="dividerr"></li>
+					<li><a href="../">Mod Profile</a></li>
+				</ul>
+				</center>
+				<div class="clear"></div>
+			</div>
+			<div id="logo_bg">
+				<div id="logo"></div>
+<div class="center">
+	<table style="width:600px;">
+		<tr>
+			<th>Reported Player</th>
+			<th>Reported By</th>
+			<th>Report Reason</th>
+		</tr>
+		<tr>
+			<td>{{ report.target }}</td>
+			<td>{{ report.reporter }}</td>
+			<td id="chatlog">{{ report.reason }}</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>
