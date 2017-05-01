@@ -26,6 +26,8 @@ class Report(models.Model):
     reporter = models.CharField(max_length=20)
     reason = models.TextField(blank=True)
     timeStamp = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.target()
     
 class Appeal(models.Model):
     banID = models.IntegerField(default=0)

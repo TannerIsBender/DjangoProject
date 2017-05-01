@@ -14,3 +14,6 @@ class IndexView(generic.ListView):
 class UserView(generic.DetailView):
     model = User
     template_name = 'ucp/user.html'
+    
+class ReportsView(generic.DetailView):
+    template_name = 'ucp/reports.html'

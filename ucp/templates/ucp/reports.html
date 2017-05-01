@@ -21,9 +21,25 @@
 			<div id="logo_bg">
 				<div id="logo"></div>
 <div class="center">
+	<table>
+		<tr> <th>Reported Player</th> <th>Reported By</th> <th>Report Reason</th> <th>View More</th> <th>Remove</th> </tr>
+		// keeps getting the next row until there are no more to get
+		while ($report = mysql_fetch_array($reportsQ)) {
 
-Welcome to the User Control Panel, {{ user }}!
-Please use the links above to navigate.<br><br>
-Your last IP used is: <span style="color:#78aace"> {{ user.player.ipAddress }} </span><br>
-You have {{ user.player.blackMarks }} blackmarks <br>
-There are : {{ ban.count }} bans currently active
+			echo "<tr><td>";
+			echo $report['target'];
+			echo "</td><td>";
+			echo $report['reporter'];
+			echo "</td><td>";
+			echo getReportText($report['reason']);
+			echo "</td><td>";
+			echo "<a href=\"viewReport.php?id=" . $report['id'] . "\" class=\"viewMore\">View More</a>";
+			echo "</td><td>";
+			echo "<a href=\"removeReport.php?id=" . $report['id'] . "\" class=\"viewMore\">Remove</a>";
+			echo "</td></tr>";
+
+		}
+
+		echo "</table>";
+			
+		</div>

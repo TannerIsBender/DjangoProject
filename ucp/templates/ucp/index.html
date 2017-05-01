@@ -28,7 +28,6 @@
 		<th>Rights</th>
 		<th>IP</th>
 	</tr>
-{% if displayUsers %}
 	<tr>
 	  {% for user in displayUsers %}
 	    <td><a href="{% url 'ucp:user' user.id %}">{{ user }}</td>
@@ -36,9 +35,6 @@
 	    <td>{{ user.player.ipAddress }}</td>
 	</tr>
   {% endfor %}
-{% else %}
-    <p>There are no users.</p>
-{% endif %}
 	
 </table>
 </div>
