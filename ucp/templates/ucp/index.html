@@ -5,7 +5,7 @@
 			<div id="top">
 				<center>
 				<ul class="navigation">
-                    <li><a href="./ucp/index.html">UCP Home</a></li>
+                    <li><a href="../ucp/">UCP Home</a></li>
 					<li class="dividerr"></li>
 					<li><a href="./1/reports/">Reports</a></li>
 					<li class="dividerr"></li>
@@ -20,19 +20,14 @@
 				<div id="logo"></div>
 <div class="center">
 <br>
-<table>
-	<tr>
-		<th>Username</th>
-		<th>Rights</th>
-		<th>IP</th>
-	</tr>
-	<tr>
-	  {% for user in displayUsers %}
-	    <td><a href="{% url 'ucp:user' user.id %}">{{ user }}</td>
-	    <td>{{ user.player.playerRights }}</td>
-	    <td>{{ user.player.ipAddress }}</td>
-	</tr>
+Welcome to the User Control Panel!
+<br>
+You can view different report logs as well as appeals for different banned players.
+Up on the navigation bar you can get to the reports and profiles of other users.
+<br><br>
+<ul>
+	{% for user in displayUsers %}
+	<li><a href="{% url 'ucp:user' user.id %}">{{user}}</li>
   {% endfor %}
-	
-</table>
+</ul>
 </div>

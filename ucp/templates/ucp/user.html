@@ -5,13 +5,13 @@
 			<div id="top">
 				<center>
 				<ul class="navigation">
-                    <li><a href="../ucp/index.html">UCP Home</a></li>
+                    <li><a href="../">UCP Home</a></li>
 					<li class="dividerr"></li>
 					<li><a href="../1/reports/">Reports</a></li>
 					<li class="dividerr"></li>
-					<li><a href="./">Admin Profile</a></li>
+					<li><a href="../1">Admin Profile</a></li>
 					<li class="dividerr"></li>
-					<li><a href="./">Mod Profile</a></li>
+					<li><a href="../2">Mod Profile</a></li>
 				</ul>
 				</center>
 				<div class="clear"></div>
@@ -24,4 +24,14 @@ Welcome to the User Control Panel, {{ user }}!
 Please use the links above to navigate.<br><br>
 Your last IP used is: <span style="color:#78aace"> {{ user.player.ipAddress }} </span><br>
 You have {{ user.player.blackMarks }} blackmarks <br>
-There are : {{ ban.count }} reports currently active
+<br>
+<br>
+<h2>Staff CP</h2>
+<br>
+{% if user.player.playerRights > 0 %}
+There are {{ reports|length }} reports currently active.
+<br>
+There are {{ bans|length }} bans currently active.
+<br>
+There are {{ appeals|length }} appeals currently active.
+{% endif %}

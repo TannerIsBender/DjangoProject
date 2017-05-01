@@ -6,6 +6,30 @@ body {
 	color: #262626;
 	background: #292929 url('./images/bg_repeat.png') repeat-x;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+li:last-child {
+  border: none;
+}
+ 
+li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 200px;
+	-webkit-transition: font-size 1.4s ease, background-color 1.4s ease;
+	-moz-transition: font-size 1.4s ease, background-color 1.4s ease;
+	transition: font-size 1.4s ease, background-color 1.4s ease;
+}
+ 
+li a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
 a {
 	text-decoration: none;
 }
@@ -18,26 +42,6 @@ a {
 	width: 760px;
 	height: 40px;
 	color: #fff;
-}
-ul, li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-#top ul li {
-	list-style: none;
-	display: inline;
-}
-#top ul li a {
-	color: #fff;
-	font-size: 10pt;
-	padding-left: 10px;
-	padding-right: 10px;
-	font-family: "Arial";
-	font-weight: bold;
-}
-#top ul li a:hover {
-	color: #292929;
 }
 .navigation {
 	width: 570px;

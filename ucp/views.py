@@ -18,3 +18,8 @@ class UserView(generic.DetailView):
 class ReportsView(generic.DetailView):
     model = Report
     template_name = 'ucp/reports.html'
+    
+@property
+def report_list(self):
+    object_list = Report.objects.count()
+    return render(self, 'ucp/user.html', { 'object_list': object_list })
